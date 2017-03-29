@@ -13,8 +13,6 @@ import com.asha.vrlib.objects.MDAbsObject3D;
 import com.asha.vrlib.objects.MDObject3DHelper;
 import com.asha.vrlib.objects.MDPlane;
 import com.asha.vrlib.plugins.MDAbsPlugin;
-import com.asha.vrlib.plugins.MDInterweavePlugin;
-import com.asha.vrlib.plugins.MDVRInterweavePlugin;
 import com.asha.vrlib.plugins.MDPanoramaPlugin;
 
 /**
@@ -61,9 +59,7 @@ public class PlaneProjection extends AbsProjectionStrategy {
 
     @Override
     public MDAbsPlugin buildMainPlugin(MDMainPluginBuilder builder) {
-//        return new MDPanoramaPlugin(builder);
-        return new MDInterweavePlugin(builder);
-//        return new MDVRInterweavePlugin(builder);
+        return new MDPanoramaPlugin(builder);
     }
 
     @Override
