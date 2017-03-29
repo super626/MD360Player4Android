@@ -43,11 +43,20 @@ public class DemoActivity extends AppCompatActivity {
         data.put(data.size(), "file:///mnt/sdcard/vr/halfdome.mp4");
         data.put(data.size(), "file:///mnt/sdcard/vr/dome.mp4");
         data.put(data.size(), "file:///mnt/sdcard/vr/stereo.mp4");
+        data.put(data.size(), "file:///mnt/sdcard/video/dfsj360vr.mp4");
+
+        data.put(data.size(), "file:///mnt/sdcard/Video/3d_test_lr.mp4");
+        data.put(data.size(), "file:///mnt/sdcard/test.mp4");
+        data.put(data.size(), "http://app.video.3dov.cn/2017/3/07/91AD3D2A7C732560B7307882D97DBA48_1488876809967.mp4");
+        data.put(data.size(), "http://app.video.3dov.cn/2017/3/07/CCFEC15465E8522BE937ED4A8453C81D_1488821334939.mp4");
         data.put(data.size(), "http://10.240.131.39/vr/570624aae1c52.mp4");
         data.put(data.size(), "http://192.168.5.106/vr/570624aae1c52.mp4");
         data.put(data.size(), "file:///mnt/sdcard/vr/video_31b451b7ca49710719b19d22e19d9e60.mp4");
 
+        data.put(data.size(), "http://app.video.3dov.cn/2016/9/07/B9974C31876AFD65DE44B9D5D4074986_1473224131953.mp4");
         data.put(data.size(), "http://cache.utovr.com/201508270528174780.m3u8");
+        data.put(data.size(), "http://app.video.3dov.cn/2016/7/27/3B27E1B680A1C1E4925360B799E283CF_1469621723448.mp4");
+
         data.put(data.size(), "file:///mnt/sdcard/vr/AGSK6416.jpg");
         data.put(data.size(), "file:///mnt/sdcard/vr/IJUN2902.jpg");
         data.put(data.size(), "file:///mnt/sdcard/vr/SUYZ2954.jpg");

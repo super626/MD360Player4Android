@@ -24,6 +24,7 @@ import com.asha.vrlib.plugins.MDAbsPlugin;
 import com.asha.vrlib.plugins.MDHotspotPlugin;
 import com.asha.vrlib.plugins.MDWidgetPlugin;
 import com.asha.vrlib.texture.MD360BitmapTexture;
+import com.asha.vrlib.plugins.MDInterweavePlugin;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -53,6 +54,7 @@ public abstract class MD360PlayerActivity extends Activity {
         sInteractiveMode.put(MDVRLibrary.INTERACTIVE_MODE_MOTION_WITH_TOUCH,"M & T");
 
         sProjectionMode.put(MDVRLibrary.PROJECTION_MODE_SPHERE,"SPHERE");
+        sProjectionMode.put(MDVRLibrary.PROJECTION_MODE_INTERWEAVE_SPHERE,"INTERWEAVE SPHERE");
         sProjectionMode.put(MDVRLibrary.PROJECTION_MODE_DOME180,"DOME 180");
         sProjectionMode.put(MDVRLibrary.PROJECTION_MODE_DOME230,"DOME 230");
         sProjectionMode.put(MDVRLibrary.PROJECTION_MODE_DOME180_UPPER,"DOME 180 UPPER");
@@ -250,6 +252,23 @@ public abstract class MD360PlayerActivity extends Activity {
                 getVRLibrary().removePlugins();
             }
         });
+
+        findViewById(R.id.btnsharpness0).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MDInterweavePlugin.sharpness = 0.0f;
+
+            }
+        });
+
+        findViewById(R.id.btnsharpness).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MDInterweavePlugin.sharpness = 0.5f;
+
+            }
+        });
+
 
         final TextView hotspotText = (TextView) findViewById(R.id.hotspot_text);
         getVRLibrary().setEyePickChangedListener(new MDVRLibrary.IEyePickListener() {

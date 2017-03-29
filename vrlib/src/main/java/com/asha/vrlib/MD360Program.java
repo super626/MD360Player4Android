@@ -37,8 +37,13 @@ public class MD360Program {
         final String vertexShader = getVertexShader(context);
         final String fragmentShader = getFragmentShader(context);
 
-        final int vertexShaderHandle = compileShader(GLES20.GL_VERTEX_SHADER, vertexShader);
-        final int fragmentShaderHandle = compileShader(GLES20.GL_FRAGMENT_SHADER, fragmentShader);
+        build(vertexShader, fragmentShader);
+    }
+
+    public void build(String vs, String fs)
+    {
+        final int vertexShaderHandle = compileShader(GLES20.GL_VERTEX_SHADER, vs);
+        final int fragmentShaderHandle = compileShader(GLES20.GL_FRAGMENT_SHADER, fs);
 
         mProgramHandle = createAndLinkProgram(vertexShaderHandle, fragmentShaderHandle,
                 new String[] {"a_Position", "a_TexCoordinate"});
@@ -57,6 +62,11 @@ public class MD360Program {
 
     protected String getFragmentShader(Context context){
         return FragmentShaderFactory.fs(context, mContentType);
+    }
+
+    public int getUniform(String uniformName)
+    {
+        return GLES20.glGetUniformLocation(mProgramHandle, uniformName);
     }
 
     public void use() {

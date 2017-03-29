@@ -114,6 +114,8 @@ public class ProjectionModeManager extends ModeManager<AbsProjectionStrategy> im
                 return new MultiFishEyeProjection(1f, MDDirection.HORIZONTAL);
             case MDVRLibrary.PROJECTION_MODE_MULTI_FISH_EYE_VERTICAL:
                 return new MultiFishEyeProjection(1f, MDDirection.VERTICAL);
+            case MDVRLibrary.PROJECTION_MODE_INTERWEAVE_SPHERE:
+                return new SphereInterweaveProjection();
             case MDVRLibrary.PROJECTION_MODE_SPHERE:
             default:
                 return new SphereProjection();

@@ -55,6 +55,7 @@ public class MDVRLibrary {
     public static final int DISPLAY_MODE_GLASS = 102;
 
     // projection mode
+    public static final int PROJECTION_MODE_INTERWEAVE_SPHERE = 200;
     public static final int PROJECTION_MODE_SPHERE = 201;
     public static final int PROJECTION_MODE_DOME180 = 202;
     public static final int PROJECTION_MODE_DOME230 = 203;
@@ -451,7 +452,7 @@ public class MDVRLibrary {
     public static class Builder {
         private int displayMode = DISPLAY_MODE_NORMAL;
         private int interactiveMode = INTERACTIVE_MODE_MOTION;
-        private int projectionMode = PROJECTION_MODE_SPHERE;
+        private int projectionMode = PROJECTION_MODE_INTERWEAVE_SPHERE;//PROJECTION_MODE_STEREO_SPHERE;//PROJECTION_MODE_PLANE_FIT;
         private Activity activity;
         private int contentType = ContentType.DEFAULT;
         private MD360Texture texture;

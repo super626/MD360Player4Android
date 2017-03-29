@@ -16,7 +16,8 @@
       <LinearLayout
           android:orientation="horizontal"
           android:layout_width="match_parent"
-          android:layout_height="match_parent">
+          android:layout_height="wrap_content"
+         >
          <TextView
              android:id="@+id/hotspot_point1"
              android:text="+"
@@ -25,6 +26,36 @@
              android:layout_weight="1"
              android:layout_width="0dp"
              android:layout_height="match_parent" />
+
+         <RelativeLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+         <LinearLayout
+             android:orientation="horizontal"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_alignParentBottom="true">
+
+            <Button
+                android:text="sharp"
+                android:layout_width="0dp"
+                android:id="@+id/btnsharpness"
+                android:layout_weight="1.16"
+                android:background="@drawable/selector_button_background"
+                android:textColor="@android:color/white"
+                android:layout_height="42dp" />
+
+            <Button
+                android:text="not sharp"
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:id="@+id/btnsharpness0"
+                android:background="@drawable/selector_button_background"
+                android:autoText="false"
+                android:textColor="@android:color/white"
+                android:layout_weight="1" />
+         </LinearLayout>
+         </RelativeLayout>
          <TextView
              android:id="@+id/hotspot_point2"
              android:text="+"
@@ -66,7 +97,7 @@
           android:id="@+id/spinner_projection"
           android:layout_width="100dp"
           android:minWidth="100dp"
-          android:layout_height="wrap_content"/>
+          android:layout_height="match_parent"/>
 
       <android.support.v7.widget.AppCompatSpinner
           android:layout_marginLeft="8dp"
@@ -154,6 +185,7 @@
           android:background="@drawable/selector_button_background"
           android:layout_width="wrap_content"
           android:layout_height="42dp" />
+
    </LinearLayout>
 
    <TextView
